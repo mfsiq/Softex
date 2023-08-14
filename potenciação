@@ -1,0 +1,14 @@
+var N = parseInt(prompt("Qual o número que deseja elevar ao quadrado? "));
+var calculo = 0
+
+if(N <= 0){
+console.log ("Número inválido. Tente novamente!");
+
+}else{
+
+for( i = 0 ; i<N ; i++){
+    calculo += ((2*i) +1)
+    
+}
+ console.log("O resultado é " + (calculo))
+}
