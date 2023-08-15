@@ -1,0 +1,32 @@
+var valor, menu;
+
+do {
+    menu = console.log("Estados disponíveis:" + "\nSP" + "\nRJ" + "\nMG" + "\nMS")
+    menu = prompt("Qual estado deseja escolher? Digite apenas apenas a sigla! ").toUpperCase();
+    valor = Number(prompt("Qual o valor do produto? "))
+
+switch(menu){
+
+    case "RJ": 
+        valor *= 1.15;
+        console.log((valor).toFixed(2));
+        break;
+    case "SP":
+        valor *=1.12;
+        console.log((valor).toFixed(2));
+        break;
+    case "MG":
+        valor *=1.07;
+        console.log((valor).toFixed(2));
+        break;
+    case "MS": 
+        valor *=1.08;
+        console.log((valor).toFixed(2));
+        break;
+    default:
+        console.log("O valor informado não é válido!")
+   
+}
+menu = prompt("Deseja continuar? (Sim | Não) ").toUpperCase()
+
+}while(menu != "NÃO" || menu != "N" || menu != "NAO")
