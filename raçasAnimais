@@ -1,0 +1,9 @@
+//animais e suas caracteristicas
+
+let grade = [
+    ['Luke','Canis familiaris', 2]
+    ['Garfield','Felis catus', 7]
+    ['Tina','O. cuniculus', 5]
+]
+
+
