@@ -1,0 +1,40 @@
+import { ListaEncadeada } from "./listaEncadeada.js";
+
+class Pessoa{
+    constructor(nome, idade){
+        this.nome = nome;
+        this.idade = idade;
+        // Lista encadeada de filhos
+        this.filhos = new ListaEncadeada();
+    }
+}
+// Criei a lista encadeada de pessas
+var listaPessoas = new ListaEncadeada();
+
+// Criar pessoas
+var gabriel = new Pessoa("Gabriel Leal", 28);
+var mariana = new Pessoa("Mariana Siqueira", 23);
+var igor = new Pessoa("Igor Silva", 30);
+var cassio = new Pessoa("Cassio Santos", 33);
+
+listaPessoas.addNoFim(gabriel);
+listaPessoas.addNoFim(mariana);
+listaPessoas.addNoFim(igor);
+listaPessoas.addNoFim(cassio);
+
+// Criar filhos
+var gabriela = new Pessoa("Gabriela Leal", 2);
+gabriel.filhos.addNoFim(gabriela);
+
+var marina = new Pessoa("Marina Siqueira", 7);
+mariana.filhos.addNoFim(marina)
+
+var rodolfo = new Pessoa("Rodolfo Silva", 18);
+igor.filhos.addNoFim(rodolfo);
+
+var carol = new Pessoa("Carol Santos", 10);
+cassio.filhos.addNoFim(carol);
+
+listaPessoas.listarConteudos();
+
+console.log(lista.Pessoas);
