@@ -1,0 +1,12 @@
+//ID
+nome = string;
+salário = number;
+idade = number;
+diploma = boolean;
+
+//CADASTRO
+var nome = "João Marcelo"
+var salario = 7.500
+var idade = 46
+var diploma = true
+
