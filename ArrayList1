@@ -1,0 +1,24 @@
+//lista de nomes
+let nomes = ['Maria','João','Gabriel','Mariana','Helena','Daniel','Caique','Heloisa','Isabelle','Guilherme'];
+
+//lista de idades
+let idades = [33,46,28,23,5,17,25,12,7,59];
+
+//lista de cores
+let cores = ['azul','rosa','preto','vermelho','laranja','amarelo','verde','roxo','branco','cinza'];
+
+console.log(nomes);
+console.log(idades);
+console.log(cores);
+
+//alterando cor
+let cores = ['azul','rosa','preto','vermelho','laranja','amarelo','verde','roxo','branco','cinza'];
+cores.splice(1,1,'lilás');
+
+//alterando idade
+let idades = [33,46,28,23,5,17,25,12,7,59];
+idades.splice(3, 1, 30)
+
+console.log(nomes);
+console.log(idades);
+console.log(cores);
