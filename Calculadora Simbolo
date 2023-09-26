@@ -10,22 +10,24 @@ while(opCalc != 0){
       case '+': 
         n1 = parseInt(prompt("Qual o primeiro número da operação? "));
         n2 = parseInt(prompt("Qual o segundo número da operação? "));
-        console.log(n1 + n2);
+        console.log("Resultado: " + (n1 + n2));
         break;
       case '-': 
         n1 = parseInt(prompt("Qual o primeiro número da operação? "));
         n2 = parseInt(prompt("Qual o segundo número da operação? "));
-        console.log(n1 - n2);
+        console.log("Resultado: " + (n1 - n2));
         break;
       case '*': 
         n1 = parseInt(prompt("Qual o primeiro número da operação? "));
         n2 = parseInt(prompt("Qual o segundo número da operação? "));
-        console.log(n1 * n2);
+        console.log("Resultado: " + (n1 * n2));
         break;
       case '/': 
         n1 = parseInt(prompt("Qual o primeiro número da operação? "));
         n2 = parseInt(prompt("Qual o segundo número da operação? "));
-        console.log(n1 / n2);
+        let resultComp = (n1 / n2)
+        console.log("Resultado: " + resultComp.toFixed(0));
+        console.log("Sobra: " + n1 % n2);
         break;
         
       case 0: 
