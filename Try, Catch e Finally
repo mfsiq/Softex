@@ -1,0 +1,24 @@
+// Solicita dois números ao usuário
+let numero1 = prompt("Digite o primeiro número:");
+let numero2 = prompt("Digite o segundo número:");
+
+try {
+    // Converte os números para tipo numérico
+    numero1 = parseFloat(numero1);
+    numero2 = parseFloat(numero2);
+
+    // Verifica se o segundo número é zero
+    if (numero2 === 0) {
+        throw new Error("Não é possível dividir por zero.");
+    }
+
+    // Realiza a divisão
+    let resultado = numero1 / numero2;
+    console.log(`O resultado da divisão é: ${resultado}`);
+} catch (error) {
+    // Captura e trata a exceção
+    console.error(`Erro: ${error.message}`);
+} finally {
+    // Executa este bloco independentemente de ter ocorrido uma exceção ou não
+    console.log("Operação concluída.");
+}
