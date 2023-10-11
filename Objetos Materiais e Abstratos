@@ -1,0 +1,121 @@
+// Definindo o objeto Carro
+class Carro {
+    constructor(cor, marca, ano) {
+        this.cor = cor;
+        this.marca = marca;
+        this.ano = ano;
+        this.ligado = false;
+    }
+
+    ligar() {
+        this.ligado = true;
+        console.log('O carro foi ligado.');
+    }
+
+    desligar() {
+        this.ligado = false;
+        console.log('O carro foi desligado.');
+    }
+
+    acelerar(velocidade) {
+        console.log(`O carro está acelerando a ${velocidade} km/h.`);
+    }
+
+let meuCarro = new Carro('Vermelho', 'Toyota', 2022);
+meuCarro.ligar();
+meuCarro.acelerar(60);
+meuCarro.desligar();
+
+}
+
+// Definindo o objeto Livro
+class Livro {
+    constructor(titulo, autor, anoPublicacao) {
+        this.titulo = titulo;
+        this.autor = autor;
+        this.anoPublicacao = anoPublicacao;
+        this.paginaAtual = 1;
+    }
+
+    abrir() {
+        console.log('O livro foi aberto na página 1.');
+    }
+
+    fechar() {
+        console.log('O livro foi fechado.');
+    }
+
+    ler(pagina) {
+        this.paginaAtual = pagina;
+        console.log(`Lendo página ${pagina} do livro.`);
+    }
+
+let meuLivro = new Livro('Aventuras de Sherlock Holmes', 'Arthur Conan Doyle', 1892);
+meuLivro.abrir();
+meuLivro.ler(10);
+meuLivro.fechar();
+
+}
+
+// Definindo o objeto Conta Bancária
+class ContaBancaria {
+    constructor(numeroConta, saldo, titular) {
+        this.numeroConta = numeroConta;
+        this.saldo = saldo;
+        this.titular = titular;
+    }
+
+    depositar(valor) {
+        this.saldo += valor;
+        console.log(`Depósito de R$ ${valor} realizado. Novo saldo: R$ ${this.saldo}`);
+    }
+
+    sacar(valor) {
+        if (this.saldo >= valor) {
+            this.saldo -= valor;
+            console.log(`Saque de R$ ${valor} realizado. Novo saldo: R$ ${this.saldo}`);
+        } else {
+            console.log('Saldo insuficiente para realizar o saque.');
+        }
+    }
+
+    consultarSaldo() {
+        console.log(`Saldo disponível: R$ ${this.saldo}`);
+    }
+
+let minhaConta = new ContaBancaria('12345', 1000, 'João');
+minhaConta.depositar(500);
+minhaConta.sacar(200);
+minhaConta.consultarSaldo();
+
+}
+
+// Definindo o objeto Calculadora
+class Calculadora {
+    constructor(marca, modelo) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.ultimaOperacao = null;
+    }
+
+    somar(a, b) {
+        this.ultimaOperacao = 'soma';
+        return a + b;
+    }
+
+    subtrair(a, b) {
+        this.ultimaOperacao = 'subtração';
+        return a - b;
+    }
+
+    multiplicar(a, b) {
+        this.ultimaOperacao = 'multiplicação';
+        return a * b;
+    }
+
+let minhaCalculadora = new Calculadora('Casio', 'FX-82MS');
+console.log(minhaCalculadora.somar(5, 10)); // 15
+console.log(minhaCalculadora.ultimaOperacao); // "soma"
+
+}
+
